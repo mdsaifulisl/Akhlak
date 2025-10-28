@@ -25,8 +25,8 @@ exports.createProduct = (req, res) => {
   const { name, price, off, size } = req.body;
   let image = null;
   if (req.file) {
-    // image = `http://localhost:5000/uploads/${req.file.filename}`;
-    image = `https://akhlak.backend.reliablekrishi.com/uploads/${req.file.filename}`;
+     image = `http://localhost:5000/uploads/${req.file.filename}`;
+    // image = `https://akhlak.backend.reliablekrishi.com/uploads/${req.file.filename}`;
   }
 
   if (!name || !price || !size || !image) {
@@ -128,3 +128,4 @@ exports.deleteProduct = (req, res) => {
     });
   });
 };
+
