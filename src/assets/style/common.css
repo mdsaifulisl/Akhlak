@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@100..900&display=swap'); 
+
+/* Root variables from previous input */
+:root {
+  /* Primary colors (used for buttons, links, and highlights) */
+  --primary: #007bff;
+  --primary-dark: #0056b3;
+  --primary-light: #4dabf7;
+
+  /* Secondary colors (complementary or contrasting) */
+  --secondary: #6c757d;
+  --secondary-dark: #545b62;
+  --secondary-light: #adb5bd;
+
+  /* Accent colors (for emphasis, e.g., ratings, promotions) */
+  --accent: #28a745;
+  --accent-dark: #218838;
+  --warning: #f39c12;
+  --danger: #dc3545;
+
+  /* Neutral colors (backgrounds, borders, etc.) */
+  --white: #ffffff;
+  --off-white: #f8f9fa;
+  --light-gray: #e9ecef;
+  --mid-gray: #dee2e6;
+  --dark-gray: #343a40;
+
+  /* Text colors */
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  --text-light: #f8f9fa;
+
+  /* Background colors */
+  --bg-light: #f4f4f4;
+  --bg-dark: #212529;
+  --bg-card: #ffffff;
+
+  /* Shadows and effects */
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Noto Sans Bengali', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  background-color: var(--bg-light);
+ 
+  overflow-x: hidden !important;
+
+}
+
+/* Heading styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-primary);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 70px;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+h4 {
+  font-size: 28px;
+}
+
+h5 {
+  font-size: 22px;
+}
+
+h6 {
+  font-size: 18px;
+  color: var(--text-secondary);
+}
+
+p {
+  color: var(--text-secondary);
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+a:focus {
+  outline: 2px solid var(--primary-light);
+  outline-offset: 2px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* button */
+
+/* Base button */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Primary button */
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--white);
+  box-shadow: var(--shadow);
+}
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Secondary button */
+.btn-secondary {
+  background-color: var(--secondary);
+  color: var(--white);
+  box-shadow: var(--shadow);
+}
+.btn-secondary:hover {
+  background-color: var(--secondary-dark);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Accent button */
+.btn-accent {
+  background-color: var(--accent);
+  color: var(--white);
+  box-shadow: var(--shadow);
+}
+.btn-accent:hover {
+  background-color: var(--accent-dark);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Warning button */
+.btn-warning {
+  background-color: var(--warning);
+  color: var(--white);
+  box-shadow: var(--shadow);
+}
+.btn-warning:hover {
+  background-color: #e08e0b; /* slightly darker than --warning */
+  box-shadow: var(--shadow-hover);
+}
+
+/* Danger button */
+.btn-danger {
+  background-color: var(--danger);
+  color: var(--white);
+  box-shadow: var(--shadow);
+}
+.btn-danger:hover {
+  background-color: #c82333; /* slightly darker than --danger */
+  box-shadow: var(--shadow-hover);
+}
+
+/* Outline buttons */
+.btn-outline-primary {
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+.btn-outline-primary:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 56px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  h4 {
+    font-size: 24px;
+  }
+  h5 {
+    font-size: 20px;
+  }
+  h6 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 48px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  h3 {
+    font-size: 28px;
+  }
+  h4 {
+    font-size: 22px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  h6 {
+    font-size: 14px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .btn{
+    padding: 0.2rem 1rem;
+  }
+ 
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  h5 {
+    font-size: 16px;
+  }
+  h6 {
+    font-size: 14px;
+  }
+  p {
+    font-size: 14px;
+  }
+}

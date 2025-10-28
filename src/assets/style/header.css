@@ -1,0 +1,244 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 10px 0;
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-light);
+}
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo img {
+  width: 70px;
+}
+
+.header__menu ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.header__menu ul li {
+  background-color: var(--bg-card);
+  padding: 10px;
+  border-radius: 5px;
+}
+.header__menu ul li a,
+.logout {
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.header__menu ul li a:hover {
+  color: var(--primary);
+}
+.logout:hover {
+  color: var(--primary);
+}
+.header__menu ul li a.active {
+  color: var(--primary);
+}
+
+.header__shop {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header__shop span {
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.header__shop span .nount {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 2px 4px;
+  border-radius: 50%;
+  font-size: 10px;
+}
+
+/* login */
+.login {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  height: 100vh;
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  transition: display 0.3s ease;
+  opacity: 0;
+}
+.login.active {
+  display: flex;
+  opacity: 1;
+}
+
+.login__section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login__section .login_from {
+  padding: 2rem;
+  width: 400px;
+  background-color: var(--bg-card);
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.login__section .login_from h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.login__section .login_from form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.login__section .login_from form input {
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+.login__section .login_from form button {
+  padding: 1rem;
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.login__section .login_from form button:hover {
+  background-color: var(--primary-dark);
+}
+.login .close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  font-size: 2rem;
+  color: var(--white);
+  font-weight: 600;
+}
+
+.none {
+  display: none;
+}
+.block {
+  display: inline-block; 
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--secondary-dark);
+}
+
+footer .social a {
+  color: var(--white);
+  font-size: 30px;
+}
+footer .social a:hover {
+  color: var(--primary);
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+footer ul li a {
+  color: var(--warning);
+}
+footer ul li a:hover {
+  color: var(--primary);
+}
+footer p {
+  color: var(--white);
+}
+footer h4 {
+  color: var(--white);
+}
+
+.social .facebook,
+.social .instagram,
+.social .tiktok {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.social .facebook {
+  color: #0967ff;
+  background-color: var(--white);
+}
+.social .instagram {
+  color:#FE8EAF;
+  background-color: var(--white);
+}
+.social .tiktok {
+  color: var(--white);
+  background-color: var(--dark-gray);
+}
+
+@media (max-width: 768px) {
+  .none {
+    display: inline-block;
+  }
+  .block {
+    display: none;
+  }
+  .header__logo img {
+    width: 60px;
+  }
+
+  .header__menu {
+    position: absolute;
+    top: 4.5rem;
+    left: -100%;
+    background-color: var(--bg-card);
+    padding: 2rem;
+    border-radius: 5px;
+    z-index: 1000;
+    transition: left 0.3s ease;
+  }
+  .header__menu.active {
+    left: 0;
+  }
+  .header__menu ul {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .login .close {
+    top: 4.5rem;
+  }
+}
